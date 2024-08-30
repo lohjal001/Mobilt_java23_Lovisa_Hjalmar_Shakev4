@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textViewX"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="67dp"
+        android:layout_marginEnd="47dp"
+        android:layout_marginBottom="66dp"
+        android:text="X"
+        android:textSize="28dp"
+        app:layout_constraintBottom_toTopOf="@+id/progressBarX"
+        app:layout_constraintEnd_toStartOf="@+id/textViewY"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewY"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="67dp"
+        android:layout_marginEnd="33dp"
+        android:layout_marginBottom="130dp"
+        android:text="Y"
+        android:textSize="28dp"
+        app:layout_constraintBottom_toTopOf="@+id/progressBarY"
+        app:layout_constraintEnd_toStartOf="@+id/textViewZ"
+        app:layout_constraintStart_toEndOf="@+id/textViewX"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewZ"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="74dp"
+        android:text="Z"
+        android:textSize="28dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textViewY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textViewY" />
+
+    <ProgressBar
+        android:id="@+id/progressBarX"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/progressBarY"
+        app:layout_constraintEnd_toEndOf="@+id/textViewY"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/textViewX" />
+
+    <ProgressBar
+        android:id="@+id/progressBarY"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="442dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/progressBarZ"
+        app:layout_constraintStart_toStartOf="@+id/progressBarZ"
+        app:layout_constraintTop_toBottomOf="@+id/textViewY" />
+
+    <ProgressBar
+        android:id="@+id/progressBarZ"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="35dp"
+        app:layout_constraintBottom_toTopOf="@+id/seekBarX"
+        app:layout_constraintEnd_toEndOf="@+id/seekBarX"
+        app:layout_constraintStart_toStartOf="@+id/seekBarX"
+        app:layout_constraintTop_toBottomOf="@+id/progressBarY" />
+
+    <SeekBar
+        android:id="@+id/seekBarX"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="19dp"
+        app:layout_constraintBottom_toTopOf="@+id/seekBarY"
+        app:layout_constraintEnd_toEndOf="@+id/seekBarY"
+        app:layout_constraintStart_toStartOf="@+id/seekBarY"
+        app:layout_constraintTop_toBottomOf="@+id/progressBarZ" />
+
+    <SeekBar
+        android:id="@+id/seekBarY"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/seekBarZ"
+        app:layout_constraintEnd_toEndOf="@+id/seekBarZ"
+        app:layout_constraintStart_toStartOf="@+id/seekBarZ"
+        app:layout_constraintTop_toBottomOf="@+id/seekBarX" />
+
+    <SeekBar
+        android:id="@+id/seekBarZ"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="147dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textViewY"
+        app:layout_constraintStart_toStartOf="@+id/progressBarX"
+        app:layout_constraintTop_toBottomOf="@+id/seekBarY" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="66dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="58dp"
+        android:layout_marginEnd="31dp"
+        app:layout_constraintEnd_toStartOf="@+id/textViewX"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textViewX"
+        app:srcCompat="@drawable/armadillo" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
